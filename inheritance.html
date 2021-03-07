@@ -1,0 +1,38 @@
+<html>
+<head>
+    <h1>vamshi krishna</h1>
+</head>  
+<body style = "text-align: center; font-size: 20px;">  
+    <h2>Class Inheritance</h2>
+
+    <p id="details"></p>
+
+
+    <script>
+        class Person {
+            constructor(name) {
+                this.name = name;
+            }
+            getname() {
+                return this.name;
+            }
+        }
+  
+        class Student extends Person {
+            constructor(name, rollno) {
+                super(name);
+                this.rollno = rollno;
+            }
+            getroll() {
+                return this.rollno;
+            }
+            disp(){
+                return "Name : "+this.getname()+" , Roll no : "+this.getroll();
+            }
+        }
+
+    let obj = new Student("vamshi krishna","18B81A05P0");
+    document.getElementById("details").innerHTML = obj.disp();
+    </script>
+  </body>
+</html>
